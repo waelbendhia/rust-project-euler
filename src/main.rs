@@ -1,12 +1,12 @@
 mod problem;
-mod level5;
+mod level7;
 mod level9;
 use std::io;
 use problem::Show;
 use std::time::{Duration, Instant};
 
 fn main() {
-    let mut all_solutions = level5::solutions();
+    let mut all_solutions = level7::solutions();
     all_solutions.append(&mut level9::solutions());
     loop {
         println!("Select a problem or 0 to exit.");
