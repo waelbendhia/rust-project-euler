@@ -4,8 +4,12 @@ pub fn problem() -> problem::Problem {
     return problem::Problem {
         ind: 179,
         name: String::from("Consecutive positive divisors"),
-        solution: count_consecutive(all_num_divisors_under(10i64.pow(7))),
+        solution: solution,
     };
+}
+
+fn solution() -> i64 {
+    return count_consecutive(all_num_divisors_under(10i64.pow(7)));
 }
 
 fn count_consecutive(divs: Vec<i64>) -> i64 {

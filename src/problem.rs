@@ -3,16 +3,18 @@ pub trait Show {
 }
 
 pub struct Problem {
-    pub ind: i64,
+    pub ind: u32,
     pub name: String,
-    pub solution: i64,
+    pub solution: fn() -> i64,
 }
 
 impl Show for Problem {
     fn show(&self) -> String {
         format!(
             "Problem {}: {} \nAnswer: {}",
-            self.ind, self.name, self.solution
+            self.ind,
+            self.name,
+            (self.solution)(),
         )
     }
 }

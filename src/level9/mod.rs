@@ -1,6 +1,5 @@
 use problem;
-mod problem179;
-
+mod problem206;
 pub fn solutions() -> Vec<problem::Problem> {
-    return vec![problem179::problem()];
+    return vec![problem206::problem()];
 }
